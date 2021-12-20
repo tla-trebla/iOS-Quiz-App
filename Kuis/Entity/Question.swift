@@ -21,7 +21,7 @@ struct Question {
         self.title = title
     }
     
-    mutating func addAnswer(_ answer: String) {
+    mutating func addAnswer(_ answer: String) throws {
         
         self.answers.append(answer)
     }
