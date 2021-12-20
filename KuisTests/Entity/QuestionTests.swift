@@ -9,5 +9,10 @@ import XCTest
 
 class QuestionTests: XCTestCase {
     
-    
+    func test_InitialQuestion() {
+        
+        let question = Question()
+        
+        XCTAssertEqual(question.title, "")
+    }
 }
