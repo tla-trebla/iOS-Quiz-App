@@ -37,4 +37,18 @@ class QuestionTests: XCTestCase {
         self.question.addAnswer("Abraham Lincoln")
         XCTAssertEqual(self.question.answers, ["Albert Einstein", "Abraham Lincoln"])
     }
+    
+    func test_AddMoreThanFourAnswersGetsAnError() {
+        
+        self.question.addAnswer("Albert Einstein")
+        self.question.addAnswer("Abraham Lincoln")
+        self.question.addAnswer("Mahatama Gandhi")
+        self.question.addAnswer("Julius Robert Oppenheimer")
+        
+        XCTAssertThrowsError(try self.question.addAnswer("Michael Jordan")) { error in
+            
+            XCTAssertEqual(error as? QuestionError,
+                           QuestionError.AnswerExceedsTheLimit)
+        }
+    }
 }
