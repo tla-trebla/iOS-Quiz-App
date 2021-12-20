@@ -33,17 +33,17 @@ class QuestionTests: XCTestCase {
     
     func test_AddAnswer() {
         
-        self.question.addAnswer("Albert Einstein")
-        self.question.addAnswer("Abraham Lincoln")
+        try? self.question.addAnswer("Albert Einstein")
+        try? self.question.addAnswer("Abraham Lincoln")
         XCTAssertEqual(self.question.answers, ["Albert Einstein", "Abraham Lincoln"])
     }
     
     func test_AddMoreThanFourAnswersGetsAnError() {
         
-        self.question.addAnswer("Albert Einstein")
-        self.question.addAnswer("Abraham Lincoln")
-        self.question.addAnswer("Mahatama Gandhi")
-        self.question.addAnswer("Julius Robert Oppenheimer")
+        try? self.question.addAnswer("Albert Einstein")
+        try? self.question.addAnswer("Abraham Lincoln")
+        try? self.question.addAnswer("Mahatama Gandhi")
+        try? self.question.addAnswer("Julius Robert Oppenheimer")
         
         XCTAssertThrowsError(try self.question.addAnswer("Michael Jordan")) { error in
             
