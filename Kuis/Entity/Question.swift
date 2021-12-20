@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum QuestionError: Error {
+    case AnswerExceedsTheLimit
+}
+
 struct Question {
     
     var title = ""
