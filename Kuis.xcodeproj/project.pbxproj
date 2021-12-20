@@ -13,6 +13,7 @@
 		5EC59C5627707D3E0098486E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC59C5427707D3E0098486E /* Main.storyboard */; };
 		5EC59C5827707D3F0098486E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC59C5727707D3F0098486E /* Assets.xcassets */; };
 		5EC59C5B27707D3F0098486E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC59C5927707D3F0098486E /* LaunchScreen.storyboard */; };
+		5EC59C7127707DCF0098486E /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C7027707DCF0098486E /* QuestionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		5EC59C5A27707D3F0098486E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EC59C5C27707D3F0098486E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EC59C6627707D8C0098486E /* KuisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC59C7027707DCF0098486E /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +92,17 @@
 		5EC59C6727707D8C0098486E /* KuisTests */ = {
 			isa = PBXGroup;
 			children = (
+				5EC59C6F27707DB20098486E /* Entity */,
 			);
 			path = KuisTests;
+			sourceTree = "<group>";
+		};
+		5EC59C6F27707DB20098486E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5EC59C7027707DCF0098486E /* QuestionTests.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 					};
 					5EC59C6527707D8C0098486E = {
 						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 						TestTargetID = 5EC59C4A27707D3E0098486E;
 					};
 				};
@@ -205,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC59C7127707DCF0098486E /* QuestionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,14 +427,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75KSF446RQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.albert-alt.KuisTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kuis.app/Kuis";
@@ -432,10 +452,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75KSF446RQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.albert-alt.KuisTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
