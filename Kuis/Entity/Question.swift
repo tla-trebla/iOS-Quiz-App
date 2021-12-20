@@ -10,10 +10,15 @@ import Foundation
 struct Question {
     
     var title = ""
-    let answers = [String]()
+    var answers = [String]()
     
     mutating func updateQuestion(_ title: String) {
         
         self.title = title
+    }
+    
+    mutating func addAnswer(_ answer: String) {
+        
+        self.answers.append(answer)
     }
 }
