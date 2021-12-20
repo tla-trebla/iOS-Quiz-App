@@ -23,6 +23,10 @@ struct Question {
     
     mutating func addAnswer(_ answer: String) throws {
         
-        self.answers.append(answer)
+        if self.answers.count < 4 {
+            self.answers.append(answer)
+        } else {
+            throw QuestionError.AnswerExceedsTheLimit
+        }
     }
 }
