@@ -10,19 +10,20 @@ import XCTest
 
 class QuestionTests: XCTestCase {
     
+    private var question: Question!
+    
+    override func setUp() {
+        
+        self.question = Question()
+    }
+    
     func test_InitialQuestion() {
-        
-        let question = Question()
-        
-        XCTAssertEqual(question.title, "")
+        XCTAssertEqual(self.question.title, "")
     }
     
     func test_UpdateQuestion() {
         
-        var question = Question()
-        
-        question.updateQuestion("Who invented the E = mc^2?")
-        
-        XCTAssertEqual(question.title, "Who invented the E = mc^2?")
+        self.question.updateQuestion("Who invented the E = mc^2?")
+        XCTAssertEqual(self.question.title, "Who invented the E = mc^2?")
     }
 }
