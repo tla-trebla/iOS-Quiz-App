@@ -8,7 +8,9 @@
 import Foundation
 
 struct Question {
+    
     var title = ""
+    let answers = [String]()
     
     mutating func updateQuestion(_ title: String) {
         
