@@ -30,4 +30,10 @@ class QuestionTests: XCTestCase {
     func test_InitialAnswers() {
         XCTAssertEqual(self.question.answers, [String]())
     }
+    
+    func test_AddAnswer() {
+        
+        self.question.addAnswer("Albert Einstein")
+        XCTAssertEqual(self.question.answers, ["Albert Einstein"])
+    }
 }
