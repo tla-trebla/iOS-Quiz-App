@@ -10,7 +10,7 @@ import Foundation
 struct Question {
     var title = ""
     
-    mutating func updateQuestion(title: String) {
+    mutating func updateQuestion(_ title: String) {
         
         self.title = title
     }

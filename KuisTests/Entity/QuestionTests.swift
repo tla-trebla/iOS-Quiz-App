@@ -19,7 +19,7 @@ class QuestionTests: XCTestCase {
     
     func test_UpdateQuestion() {
         
-        let question = Question()
+        var question = Question()
         
         question.updateQuestion("Who invented the E = mc^2?")
         
