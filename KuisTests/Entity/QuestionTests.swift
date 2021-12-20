@@ -16,4 +16,13 @@ class QuestionTests: XCTestCase {
         
         XCTAssertEqual(question.title, "")
     }
+    
+    func test_UpdateQuestion() {
+        
+        let question = Question()
+        
+        question.updateQuestion("Who invented the E = mc^2?")
+        
+        XCTAssertEqual(question.title, "Who invented the E = mc^2?")
+    }
 }
