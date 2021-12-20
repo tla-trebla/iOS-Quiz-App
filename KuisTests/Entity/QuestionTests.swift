@@ -34,6 +34,7 @@ class QuestionTests: XCTestCase {
     func test_AddAnswer() {
         
         self.question.addAnswer("Albert Einstein")
-        XCTAssertEqual(self.question.answers, ["Albert Einstein"])
+        self.question.addAnswer("Abraham Lincoln")
+        XCTAssertEqual(self.question.answers, ["Albert Einstein", "Abraham Lincoln"])
     }
 }
