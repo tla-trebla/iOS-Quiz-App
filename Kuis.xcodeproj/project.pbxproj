@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E9FB32770DC5F0083BA7C /* Question.swift */; };
 		5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C4E27707D3E0098486E /* AppDelegate.swift */; };
 		5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5027707D3E0098486E /* SceneDelegate.swift */; };
 		5EC59C5327707D3E0098486E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5227707D3E0098486E /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E8E9FB32770DC5F0083BA7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5EC59C4B27707D3E0098486E /* Kuis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC59C4E27707D3E0098486E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC59C5027707D3E0098486E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E8E9FB22770DC510083BA7C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5E8E9FB32770DC5F0083BA7C /* Question.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		5EC59C4227707D3D0098486E = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		5EC59C4D27707D3E0098486E /* Kuis */ = {
 			isa = PBXGroup;
 			children = (
+				5E8E9FB22770DC510083BA7C /* Entity */,
 				5EC59C4E27707D3E0098486E /* AppDelegate.swift */,
 				5EC59C5027707D3E0098486E /* SceneDelegate.swift */,
 				5EC59C5227707D3E0098486E /* ViewController.swift */,
@@ -208,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC59C5327707D3E0098486E /* ViewController.swift in Sources */,
+				5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */,
 				5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */,
 				5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */,
 			);
