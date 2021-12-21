@@ -9,6 +9,7 @@ import Foundation
 
 enum QuestionError: Error {
     case AnswerExceedsTheLimit
+    case NoCorrectAnswer
 }
 
 struct Question {
