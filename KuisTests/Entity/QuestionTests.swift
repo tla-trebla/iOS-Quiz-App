@@ -61,4 +61,17 @@ class QuestionTests: XCTestCase {
         self.question.updateCorrectAnswer("Albert Einstein")
         XCTAssertEqual(self.question.correctAnswer, "Albert Einstein")
     }
+    
+    func test_UpdateCorrectAnswerWithoutProvidedAnswersGetsAnError() {
+        
+        try? self.question.addAnswer("Albert Einstein")
+        try? self.question.addAnswer("Abraham Lincoln")
+        try? self.question.addAnswer("George Washington")
+        try? self.question.addAnswer("Michael Jordan")
+        
+        XCTAssertThrowsError(try self.question.updateCorrectAnswer("Joko Widodo")) { error in
+            
+            XCTAssertEqual(error as? QuestionError, QuestionError.NoCorrectAnswer)
+        }
+    }
 }
