@@ -32,10 +32,7 @@ class QuestionTests: XCTestCase {
     
     func test_AddMoreThanFourAnswersGetsAnError() {
         
-        try? self.question.addAnswer("Albert Einstein")
-        try? self.question.addAnswer("Abraham Lincoln")
-        try? self.question.addAnswer("Mahatama Gandhi")
-        try? self.question.addAnswer("Julius Robert Oppenheimer")
+        addAnswers()
         
         XCTAssertThrowsError(try self.question.addAnswer("Michael Jordan")) { error in
             
@@ -46,14 +43,21 @@ class QuestionTests: XCTestCase {
     
     func test_UpdateCorrectAnswerWithoutProvidedAnswersGetsAnError() {
         
-        try? self.question.addAnswer("Albert Einstein")
-        try? self.question.addAnswer("Abraham Lincoln")
-        try? self.question.addAnswer("George Washington")
-        try? self.question.addAnswer("Michael Jordan")
+        addAnswers()
         
         XCTAssertThrowsError(try self.question.updateCorrectAnswer("Joko Widodo")) { error in
             
             XCTAssertEqual(error as? QuestionError, QuestionError.NoCorrectAnswer)
         }
+    }
+    
+    // MARK: - Helpers
+    
+    private func addAnswers() {
+        
+        try? self.question.addAnswer("Albert Einstein")
+        try? self.question.addAnswer("Abraham Lincoln")
+        try? self.question.addAnswer("Mahatama Gandhi")
+        try? self.question.addAnswer("Julius Robert Oppenheimer")
     }
 }
