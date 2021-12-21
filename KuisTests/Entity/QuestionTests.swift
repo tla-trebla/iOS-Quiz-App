@@ -51,4 +51,8 @@ class QuestionTests: XCTestCase {
                            QuestionError.AnswerExceedsTheLimit)
         }
     }
+    
+    func test_InitialCorrectAnswer() {
+        XCTAssertEqual(self.question.correctAnswer, "")
+    }
 }
