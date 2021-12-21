@@ -15,7 +15,7 @@ struct Question {
     
     var title = ""
     var answers = [String]()
-    let correctAnswer = ""
+    var correctAnswer = ""
     
     mutating func updateQuestion(_ title: String) {
         
@@ -29,5 +29,9 @@ struct Question {
         } else {
             throw QuestionError.AnswerExceedsTheLimit
         }
+    }
+    
+    mutating func updateCorrectAnswer(_ correctAnswer: String) {
+        self.correctAnswer = correctAnswer
     }
 }
