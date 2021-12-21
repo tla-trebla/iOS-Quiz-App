@@ -31,13 +31,6 @@ class QuestionTests: XCTestCase {
         XCTAssertEqual(self.question.answers, [String]())
     }
     
-    func test_AddAnswer() {
-        
-        try? self.question.addAnswer("Albert Einstein")
-        try? self.question.addAnswer("Abraham Lincoln")
-        XCTAssertEqual(self.question.answers, ["Albert Einstein", "Abraham Lincoln"])
-    }
-    
     func test_AddMoreThanFourAnswersGetsAnError() {
         
         try? self.question.addAnswer("Albert Einstein")
