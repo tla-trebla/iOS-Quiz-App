@@ -15,6 +15,7 @@ struct Question {
     
     var title = ""
     var answers = [String]()
+    let correctAnswer = ""
     
     mutating func updateQuestion(_ title: String) {
         
