@@ -58,7 +58,9 @@ class QuestionTests: XCTestCase {
     
     func test_UpdateCorrectAnswer() {
         
-        self.question.updateCorrectAnswer("Albert Einstein")
+        try? self.question.addAnswer("Albert Einstein")
+        try? self.question.updateCorrectAnswer("Albert Einstein")
+        
         XCTAssertEqual(self.question.correctAnswer, "Albert Einstein")
     }
     
