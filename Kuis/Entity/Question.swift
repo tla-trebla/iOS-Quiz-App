@@ -31,7 +31,12 @@ struct Question {
         }
     }
     
-    mutating func updateCorrectAnswer(_ correctAnswer: String) {
-        self.correctAnswer = correctAnswer
+    mutating func updateCorrectAnswer(_ correctAnswer: String) throws {
+        
+        if self.answers.contains(correctAnswer) {
+            self.correctAnswer = correctAnswer
+        } else {
+            throw QuestionError.NoCorrectAnswer
+        }
     }
 }
