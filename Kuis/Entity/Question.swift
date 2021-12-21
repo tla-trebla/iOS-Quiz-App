@@ -18,7 +18,6 @@ struct Question {
     var correctAnswer = ""
     
     mutating func updateQuestion(_ title: String) {
-        
         self.title = title
     }
     
