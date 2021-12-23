@@ -17,17 +17,18 @@ class QuestionTests: XCTestCase {
         self.question = Question()
     }
     
-    func test_InitialQuestion() {
-        
+    func test_InitialQuestionTitle() {
         XCTAssertEqual(self.question.title, "")
-        XCTAssertEqual(self.question.answers, [String]())
-        XCTAssertEqual(self.question.correctAnswer, "")
     }
     
-    func test_UpdateQuestion() {
+    func test_UpdateQuestionTitle() {
         
         self.question.updateQuestion("Who invented the E = mc^2?")
         XCTAssertEqual(self.question.title, "Who invented the E = mc^2?")
+    }
+    
+    func test_InitialQuestionAnswers() {
+        XCTAssertEqual(self.question.answers, [String]())
     }
     
     func test_AddMoreThanFourAnswersGetsAnError() {
@@ -39,6 +40,10 @@ class QuestionTests: XCTestCase {
             XCTAssertEqual(error as? QuestionError,
                            QuestionError.AnswerExceedsTheLimit)
         }
+    }
+    
+    func test_InitialQuestionCorrectAnswer() {
+        XCTAssertEqual(self.question.correctAnswer, "")
     }
     
     func test_UpdateCorrectAnswerWithoutProvidedAnswersGetsAnError() {
