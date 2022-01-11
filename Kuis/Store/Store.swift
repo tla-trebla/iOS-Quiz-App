@@ -8,5 +8,6 @@
 import Foundation
 
 protocol Store {
-    func fetch()
+    associatedtype Entity
+    func fetch() throws -> [Entity]
 }
