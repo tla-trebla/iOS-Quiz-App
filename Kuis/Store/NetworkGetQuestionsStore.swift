@@ -1,5 +1,5 @@
 //
-//  APIStore.swift
+//  NetworkGetQuestionsStore.swift
 //  Kuis
 //
 //  Created by Albert Pangestu on 11/01/22.
@@ -7,21 +7,24 @@
 
 import Foundation
 
-enum StoreError: Error {
+enum NetworkFetchError: Error {
     case invalidURL
 }
 
-struct APIStore: Store {
+protocol GetQuestionsStore {
+    typealias GetQuestionsCompletion = (Result<[Question], Error>) -> Void
+    func fetch(completion: @escaping GetQuestionsCompletion)
+}
+
+struct NetworkGetQuestionsStore: GetQuestionsStore {
     
-    typealias Entity = Question
-    
-    func fetch() throws -> [Entity] {
+    func fetch(completion: @escaping GetQuestionsCompletion) {
         
         // TODO: Create Array based on the user request of how many Questions they asked.
         var questions = Array(repeating: Question(), count: 10)
         
         guard let url = URL(string: "https://opentdb.com/api.php?amount=10&category=28&type=multiple") else {
-            throw StoreError.invalidURL
+            return completion(.failure(NetworkFetchError.invalidURL))
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -37,7 +40,7 @@ struct APIStore: Store {
                 }
             }
         }.resume()
-        
-        return questions
+    
+        completion(.success(questions))
     }
 }
