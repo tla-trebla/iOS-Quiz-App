@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E9FB32770DC5F0083BA7C /* Question.swift */; };
 		5EA98CF6278D7FC100C0C710 /* CodableQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */; };
-		5EC45A96278D66DB00FB6674 /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A95278D66DB00FB6674 /* APIStore.swift */; };
-		5EC45A98278D66F400FB6674 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A97278D66F400FB6674 /* Store.swift */; };
+		5EA98CF8278D97AB00C0C710 /* LoadQuestionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */; };
+		5EC45A96278D66DB00FB6674 /* NetworkGetQuestionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */; };
 		5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C4E27707D3E0098486E /* AppDelegate.swift */; };
 		5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5027707D3E0098486E /* SceneDelegate.swift */; };
 		5EC59C5327707D3E0098486E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5227707D3E0098486E /* ViewController.swift */; };
@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		5E8E9FB32770DC5F0083BA7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableQuestion.swift; sourceTree = "<group>"; };
-		5EC45A95278D66DB00FB6674 /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
-		5EC45A97278D66F400FB6674 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsInteractor.swift; sourceTree = "<group>"; };
+		5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetQuestionsStore.swift; sourceTree = "<group>"; };
 		5EC59C4B27707D3E0098486E /* Kuis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC59C4E27707D3E0098486E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC59C5027707D3E0098486E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +76,7 @@
 		5EC45A90278D669C00FB6674 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -83,8 +84,7 @@
 		5EC45A94278D66D300FB6674 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				5EC45A95278D66DB00FB6674 /* APIStore.swift */,
-				5EC45A97278D66F400FB6674 /* Store.swift */,
+				5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */,
 				5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */,
 			);
 			path = Store;
@@ -245,10 +245,10 @@
 			files = (
 				5EC59C5327707D3E0098486E /* ViewController.swift in Sources */,
 				5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */,
-				5EC45A96278D66DB00FB6674 /* APIStore.swift in Sources */,
-				5EC45A98278D66F400FB6674 /* Store.swift in Sources */,
+				5EC45A96278D66DB00FB6674 /* NetworkGetQuestionsStore.swift in Sources */,
 				5EA98CF6278D7FC100C0C710 /* CodableQuestion.swift in Sources */,
 				5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */,
+				5EA98CF8278D97AB00C0C710 /* LoadQuestionsInteractor.swift in Sources */,
 				5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
