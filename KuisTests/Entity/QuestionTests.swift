@@ -46,16 +46,6 @@ class QuestionTests: XCTestCase {
         XCTAssertEqual(self.question.correctAnswer, "")
     }
     
-    func test_UpdateCorrectAnswerWithoutProvidedAnswersGetsAnError() {
-        
-        addAnswers()
-        
-        XCTAssertThrowsError(try self.question.updateCorrectAnswer("Joko Widodo")) { error in
-            
-            XCTAssertEqual(error as? QuestionError, QuestionError.NoCorrectAnswer)
-        }
-    }
-    
     // MARK: - Helpers
     
     private func addAnswers() {
