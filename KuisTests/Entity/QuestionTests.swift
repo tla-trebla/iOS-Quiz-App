@@ -28,14 +28,14 @@ class QuestionTests: XCTestCase {
     }
     
     func test_InitialQuestionAnswers() {
-        XCTAssertEqual(self.question.answers, [String]())
+        XCTAssertEqual(self.question.incorrectAnswers, [String]())
     }
     
     func test_AddMoreThanFourAnswersGetsAnError() {
         
         addAnswers()
         
-        XCTAssertThrowsError(try self.question.addAnswer("Michael Jordan")) { error in
+        XCTAssertThrowsError(try self.question.addIncorrectAnswers("Michael Jordan")) { error in
             
             XCTAssertEqual(error as? QuestionError,
                            QuestionError.AnswerExceedsTheLimit)
@@ -60,9 +60,8 @@ class QuestionTests: XCTestCase {
     
     private func addAnswers() {
         
-        try? self.question.addAnswer("Albert Einstein")
-        try? self.question.addAnswer("Abraham Lincoln")
-        try? self.question.addAnswer("Mahatama Gandhi")
-        try? self.question.addAnswer("Julius Robert Oppenheimer")
+        try? self.question.addIncorrectAnswers("Albert Einstein")
+        try? self.question.addIncorrectAnswers("Abraham Lincoln")
+        try? self.question.addIncorrectAnswers("Mahatama Gandhi")
     }
 }

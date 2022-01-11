@@ -9,23 +9,22 @@ import Foundation
 
 enum QuestionError: Error {
     case AnswerExceedsTheLimit
-    case NoCorrectAnswer
 }
 
 struct Question {
     
     var title = ""
-    var answers = [String]()
+    var incorrectAnswers = [String]()
     var correctAnswer = ""
     
     mutating func updateQuestion(_ title: String) {
         self.title = title
     }
     
-    mutating func addAnswer(_ answer: String) throws {
+    mutating func addIncorrectAnswers(_ answer: String) throws {
         
-        if self.answers.count < 4 {
-            self.answers.append(answer)
+        if self.incorrectAnswers.count < 3 {
+            self.incorrectAnswers.append(answer)
         } else {
             throw QuestionError.AnswerExceedsTheLimit
         }
