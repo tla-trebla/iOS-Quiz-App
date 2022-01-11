@@ -62,5 +62,7 @@ extension Question {
         
         // Initialize properties
         self.title = title
+        self.correctAnswer = correctAnswer
+        self.incorrectAnswers = incorrectAnswers
     }
 }
