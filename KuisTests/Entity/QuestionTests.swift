@@ -50,8 +50,6 @@ class QuestionTests: XCTestCase {
     
     private func addAnswers() {
         
-        try? self.question.addIncorrectAnswers("Albert Einstein")
-        try? self.question.addIncorrectAnswers("Abraham Lincoln")
-        try? self.question.addIncorrectAnswers("Mahatama Gandhi")
+        try? self.question.addIncorrectAnswers(["Albert Einstein", "Abraham Lincoln", "Mahatama Gandhi"])
     }
 }
