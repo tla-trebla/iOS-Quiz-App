@@ -14,55 +14,25 @@ enum QuestionError: Error {
 struct Question {
     
     var title = ""
-    var incorrectAnswers = [String]()
+    var incorrectAnswers = Array(repeating: "", count: 3)
     var correctAnswer = ""
     
     mutating func updateQuestion(_ title: String) {
         self.title = title
     }
     
-    mutating func addIncorrectAnswers(_ answer: String) throws {
+    mutating func addIncorrectAnswers(_ answers: [String]) throws {
         
-        if self.incorrectAnswers.count < 3 {
-            self.incorrectAnswers.append(answer)
-        } else {
+        guard answers.count < 4 else {
             throw QuestionError.AnswerExceedsTheLimit
         }
+        
+        for (index, answer) in answers.enumerated() {
+            self.incorrectAnswers[index] = answer
+        }
     }
     
-    mutating func updateCorrectAnswer(_ correctAnswer: String) throws {
+    mutating func updateCorrectAnswer(_ correctAnswer: String) {
         self.correctAnswer = correctAnswer
-    }
-}
-
-// MARK: - JSON Initializer
-
-enum SerilizationError: Error {
-    case missing(String)
-}
-
-extension Question {
-    
-    init(json: [String: Any]) throws {
-        
-        // Extract title
-        guard let title = json["question"] as? String else {
-            throw SerilizationError.missing("title")
-        }
-        
-        // Extract correct_answer
-        guard let correctAnswer = json["correct_answer"] as? String else {
-            throw SerilizationError.missing("correctAnswer")
-        }
-        
-        // Extract incorrect_answers
-        guard let incorrectAnswers = json["incorrect_answers"] as? [String] else {
-            throw SerilizationError.missing("incorrectAnswers")
-        }
-        
-        // Initialize properties
-        self.title = title
-        self.correctAnswer = correctAnswer
-        self.incorrectAnswers = incorrectAnswers
     }
 }

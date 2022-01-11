@@ -28,7 +28,7 @@ class QuestionTests: XCTestCase {
     }
     
     func test_InitialQuestionAnswers() {
-        XCTAssertEqual(self.question.incorrectAnswers, [String]())
+        XCTAssertEqual(self.question.incorrectAnswers, Array(repeating: "", count: 3))
     }
     
     func test_AddMoreThanThreeAnswersGetsAnError() {
