@@ -73,21 +73,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		5EC45A90278D669C00FB6674 /* Interactor */ = {
+		5EC45A90278D669C00FB6674 /* LoadQuestions */ = {
 			isa = PBXGroup;
 			children = (
 				5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		5EC45A94278D66D300FB6674 /* Store */ = {
-			isa = PBXGroup;
-			children = (
 				5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */,
 				5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */,
 			);
-			path = Store;
+			path = LoadQuestions;
 			sourceTree = "<group>";
 		};
 		5EC59C4227707D3D0098486E = {
@@ -111,8 +104,7 @@
 		5EC59C4D27707D3E0098486E /* Kuis */ = {
 			isa = PBXGroup;
 			children = (
-				5EC45A94278D66D300FB6674 /* Store */,
-				5EC45A90278D669C00FB6674 /* Interactor */,
+				5EC45A90278D669C00FB6674 /* LoadQuestions */,
 				5E8E9FB22770DC510083BA7C /* Entity */,
 				5EC59C4E27707D3E0098486E /* AppDelegate.swift */,
 				5EC59C5027707D3E0098486E /* SceneDelegate.swift */,
