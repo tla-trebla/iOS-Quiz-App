@@ -34,3 +34,23 @@ struct Question {
         self.correctAnswer = correctAnswer
     }
 }
+
+// MARK: - JSON Initializer
+
+enum SerilizationError: Error {
+    case missing(String)
+}
+
+extension Question {
+    
+    init(json: [String: Any]) throws {
+        
+        // Extract name
+        guard let title = json["question"] as? String else {
+            throw SerilizationError.missing("title")
+        }
+        
+        // Initialize properties
+        self.title = title
+    }
+}
