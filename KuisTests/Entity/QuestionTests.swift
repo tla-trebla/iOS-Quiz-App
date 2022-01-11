@@ -33,9 +33,7 @@ class QuestionTests: XCTestCase {
     
     func test_AddMoreThanThreeAnswersGetsAnError() {
         
-        addAnswers()
-        
-        XCTAssertThrowsError(try self.question.addIncorrectAnswers("Michael Jordan")) { error in
+        XCTAssertThrowsError(try self.question.addIncorrectAnswers(["Albert Einstein", "Abraham Lincoln", "Mahatama Gandhi", "Michael Jordan"])) { error in
             
             XCTAssertEqual(error as? QuestionError,
                            QuestionError.AnswerExceedsTheLimit)
