@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol Store {
+    func fetch()
+}
