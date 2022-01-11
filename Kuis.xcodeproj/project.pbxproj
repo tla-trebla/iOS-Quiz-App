@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E9FB32770DC5F0083BA7C /* Question.swift */; };
+		5EA98CF6278D7FC100C0C710 /* CodableQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */; };
 		5EC45A96278D66DB00FB6674 /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A95278D66DB00FB6674 /* APIStore.swift */; };
 		5EC45A98278D66F400FB6674 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A97278D66F400FB6674 /* Store.swift */; };
 		5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C4E27707D3E0098486E /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		5E8E9FB32770DC5F0083BA7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableQuestion.swift; sourceTree = "<group>"; };
 		5EC45A95278D66DB00FB6674 /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		5EC45A97278D66F400FB6674 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5EC59C4B27707D3E0098486E /* Kuis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			children = (
 				5EC45A95278D66DB00FB6674 /* APIStore.swift */,
 				5EC45A97278D66F400FB6674 /* Store.swift */,
+				5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */,
 				5EC45A96278D66DB00FB6674 /* APIStore.swift in Sources */,
 				5EC45A98278D66F400FB6674 /* Store.swift in Sources */,
+				5EA98CF6278D7FC100C0C710 /* CodableQuestion.swift in Sources */,
 				5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */,
 				5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */,
 			);
