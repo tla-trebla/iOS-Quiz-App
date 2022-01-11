@@ -50,6 +50,16 @@ extension Question {
             throw SerilizationError.missing("title")
         }
         
+        // Extract correct_answer
+        guard let correctAnswer = json["correct_answer"] as? String else {
+            throw SerilizationError.missing("correctAnswer")
+        }
+        
+        // Extract incorrect_answers
+        guard let incorrectAnswers = json["incorrect_answers"] as? [String] else {
+            throw SerilizationError.missing("incorrectAnswers")
+        }
+        
         // Initialize properties
         self.title = title
     }
