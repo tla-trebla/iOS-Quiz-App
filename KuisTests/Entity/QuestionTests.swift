@@ -31,7 +31,7 @@ class QuestionTests: XCTestCase {
         XCTAssertEqual(self.question.incorrectAnswers, [String]())
     }
     
-    func test_AddMoreThanFourAnswersGetsAnError() {
+    func test_AddMoreThanThreeAnswersGetsAnError() {
         
         addAnswers()
         
