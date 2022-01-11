@@ -17,6 +17,7 @@ struct APIStore: Store {
     
     func fetch() throws -> [Entity] {
         
+        // TODO: Create Array based on the user request of how many Questions they asked.
         var questions = Array(repeating: Question(), count: 10)
         
         guard let url = URL(string: "https://opentdb.com/api.php?amount=10&category=28&type=multiple") else {
