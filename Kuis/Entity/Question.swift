@@ -45,7 +45,7 @@ extension Question {
     
     init(json: [String: Any]) throws {
         
-        // Extract name
+        // Extract title
         guard let title = json["question"] as? String else {
             throw SerilizationError.missing("title")
         }
