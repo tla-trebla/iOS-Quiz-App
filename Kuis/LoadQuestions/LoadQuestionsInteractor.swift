@@ -19,11 +19,9 @@ class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
     var presenter: LoadQuestionsPresenterOutput?
     
     private let networkStore: GetQuestionsStore
-    private let presenter: LoadQuestionsPresenter
     
-    init(networkStore: GetQuestionsStore, presenter: LoadQuestionsPresenter) {
+    init(networkStore: GetQuestionsStore) {
         self.networkStore = networkStore
-        self.presenter = presenter
     }
     
     func fetchQuestions() {
