@@ -17,7 +17,7 @@ class DefaultLoadQuestionsRouter: LoadQuestionsRouter {
     
     func createModule() -> LoadQuestionsViewController {
         
-        
+        return LoadQuestionsViewController()
     }
     
     func pushToQuestionScreen(navigationController: UINavigationController) {
