@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E473ABE278EC3140019185D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E473ABD278EC3140019185D /* AppConstants.swift */; };
+		5E473AC0278ED5420019185D /* LoadQuestionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E473ABF278ED5420019185D /* LoadQuestionsRouter.swift */; };
 		5E6BAFB0278DE64700F7FFE4 /* LoadQuestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6BAFAF278DE64700F7FFE4 /* LoadQuestionsPresenter.swift */; };
 		5E6BAFB2278DE76300F7FFE4 /* LoadQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */; };
 		5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E9FB32770DC5F0083BA7C /* Question.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		5E473ABD278EC3140019185D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5E473ABF278ED5420019185D /* LoadQuestionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsRouter.swift; sourceTree = "<group>"; };
 		5E6BAFAF278DE64700F7FFE4 /* LoadQuestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsPresenter.swift; sourceTree = "<group>"; };
 		5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsViewController.swift; sourceTree = "<group>"; };
 		5E8E9FB32770DC5F0083BA7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */,
 				5E6BAFAF278DE64700F7FFE4 /* LoadQuestionsPresenter.swift */,
 				5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */,
+				5E473ABF278ED5420019185D /* LoadQuestionsRouter.swift */,
 			);
 			path = LoadQuestions;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				5EA98CF8278D97AB00C0C710 /* LoadQuestionsInteractor.swift in Sources */,
 				5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */,
 				5E473ABE278EC3140019185D /* AppConstants.swift in Sources */,
+				5E473AC0278ED5420019185D /* LoadQuestionsRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
