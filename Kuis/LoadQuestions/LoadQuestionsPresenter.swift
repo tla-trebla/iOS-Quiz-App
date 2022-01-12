@@ -6,21 +6,48 @@
 //
 
 import Foundation
+import UIKit
 
-protocol LoadQuestionsPresenter {
-    func showLoadQuestionsSuccessful(question: [Question])
-    func showLoadFailed(message: String)
+protocol LoadQuestionsPresenterInput {
+    
+    var view: LoadQuestionsViewController? { get set }
+    var interactor: LoadQuestionsInteractor? { get set }
+    var router: LoadQuestionsRouter? { get set }
+    
+    func startFetchingQuestions()
+    func showQuestionController(navigationController: UINavigationController)
 }
 
-final class DefaultLoadQuestionsPresenter: LoadQuestionsPresenter {
+protocol LoadQuestionsPresenterOutput {
     
-    var viewController: LoadQuestionsSceneView?
+    func loadQuestionsSuccess(question: [Question])
+    func loadQuestionsFailed()
+}
+
+// MARK: - View to Presenter
+class DefaultLoadQuestionsPresenter: LoadQuestionsPresenterInput {
     
-    func showLoadQuestionsSuccessful(question: [Question]) {
-        
+    var view: LoadQuestionsViewController?
+    var interactor: LoadQuestionsInteractor?
+    var router: LoadQuestionsRouter?
+    
+    func startFetchingQuestions() {
+        interactor?.fetchQuestions()
     }
     
-    func showLoadFailed(message: String) {
-        
+    func showQuestionController(navigationController: UINavigationController) {
+        router?.pushToQuestionScreen(navigationController: navigationController)
+    }
+}
+
+// MARK: - Interactor to Presenter
+extension DefaultLoadQuestionsPresenter: LoadQuestionsPresenterOutput {
+    
+    func loadQuestionsSuccess(question: [Question]) {
+        view?.showQuestions(questions: question)
+    }
+    
+    func loadQuestionsFailed() {
+        view?.showError()
     }
 }
