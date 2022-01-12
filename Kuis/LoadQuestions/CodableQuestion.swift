@@ -9,10 +9,6 @@ import Foundation
 
 // MARK: - JSON Initializer
 
-enum SerilizationError: Error {
-    case missing(String)
-}
-
 struct CodableQuestion: Codable {
     
     var question: String
