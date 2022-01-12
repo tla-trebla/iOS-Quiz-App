@@ -23,7 +23,7 @@ struct NetworkGetQuestionsStore: GetQuestionsStore {
         // TODO: Create Array based on the user request of how many Questions they asked.
         var questions = Array(repeating: Question(), count: 10)
         
-        guard let url = URL(string: "https://opentdb.com/api.php?amount=10&category=28&type=multiple") else {
+        guard let url = URL(string: API_OPEN_TRIVIA_DB) else {
             return completion(.failure(NetworkFetchError.invalidURL))
         }
         
