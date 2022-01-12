@@ -8,12 +8,15 @@
 import Foundation
 
 protocol LoadQuestionsInteractor {
-    func execute()
+    var presenter: LoadQuestionsPresenterOutput? { get set }
+    func fetchQuestions()
 }
 
-final class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
+// MARK: - Interactor to Presenter
+class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
     
-    typealias Response = Question
+    
+    var presenter: LoadQuestionsPresenterOutput?
     
     private let networkStore: GetQuestionsStore
     private let presenter: LoadQuestionsPresenter
@@ -23,7 +26,7 @@ final class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
         self.presenter = presenter
     }
     
-    func execute() {
+    func fetchQuestions() {
         
         networkStore.fetch { result in
             switch result {
