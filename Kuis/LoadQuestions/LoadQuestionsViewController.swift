@@ -9,24 +9,25 @@ import Foundation
 import UIKit
 
 protocol LoadQuestionsSceneView {
-    func showQuestions(questions: [String])
-    func showFailureLoadQuestions(message: String)
+    func showQuestions(questions: Array<Question>)
+    func showError()
 }
 
-final class LoadQuestionsViewController: UIViewController {
+class LoadQuestionsViewController: UIViewController {
     
-    var presenter: LoadQuestionsPresenter?
+    var presenter: LoadQuestionsPresenterInput?
     
     var questionArray = Array(repeating: "", count: 10)
 }
 
+// MARK: - View to Presenter
 extension LoadQuestionsViewController: LoadQuestionsSceneView {
     
-    func showQuestions(questions: [String]) {
+    func showQuestions(questions: Array<Question>) {
         
     }
     
-    func showFailureLoadQuestions(message: String) {
+    func showError() {
         
     }
 }
