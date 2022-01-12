@@ -18,6 +18,9 @@ class LoadQuestionsViewController: UIViewController {
     var presenter: LoadQuestionsPresenterInput?
     
     var questionArray = Array(repeating: "", count: 10)
+    
+    @IBAction func startGameButtonPressed(_ sender: Any) {
+    }
 }
 
 // MARK: - View to Presenter
