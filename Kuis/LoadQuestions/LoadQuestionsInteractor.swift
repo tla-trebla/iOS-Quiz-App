@@ -29,9 +29,9 @@ class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
         networkStore.fetch { result in
             switch result {
             case .success(let questions):
-                self.presenter.showLoadQuestionsSuccessful(question: questions)
-            case .failure(let error):
-                self.presenter.showLoadFailed(message: error.localizedDescription)
+                self.presenter?.loadQuestionsSuccess(question: questions)
+            case .failure(_):
+                self.presenter?.loadQuestionsFailed()
             }
         }
     }
