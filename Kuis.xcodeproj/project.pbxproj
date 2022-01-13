@@ -16,6 +16,8 @@
 		5EA98CF8278D97AB00C0C710 /* LoadQuestionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */; };
 		5EAD235B278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAD235A278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard */; };
 		5EC45A96278D66DB00FB6674 /* NetworkGetQuestionsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */; };
+		5EC53B5D278FFABB00093BB0 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC53B5C278FFABB00093BB0 /* AnswerCell.swift */; };
+		5EC53B5F278FFACF00093BB0 /* Answer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EC53B5E278FFACF00093BB0 /* Answer.xib */; };
 		5EC59C4F27707D3E0098486E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C4E27707D3E0098486E /* AppDelegate.swift */; };
 		5EC59C5127707D3E0098486E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5027707D3E0098486E /* SceneDelegate.swift */; };
 		5EC59C5327707D3E0098486E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC59C5227707D3E0098486E /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 		5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsInteractor.swift; sourceTree = "<group>"; };
 		5EAD235A278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadQuestionsStoryboard.storyboard; sourceTree = "<group>"; };
 		5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkGetQuestionsStore.swift; sourceTree = "<group>"; };
+		5EC53B5C278FFABB00093BB0 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		5EC53B5E278FFACF00093BB0 /* Answer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Answer.xib; sourceTree = "<group>"; };
 		5EC59C4B27707D3E0098486E /* Kuis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kuis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC59C4E27707D3E0098486E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC59C5027707D3E0098486E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		5EACD484278FADE80095F98A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EC53B5B278FFA9B00093BB0 /* AnswerCell */,
 				5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */,
 				5EAD235A278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard */,
 			);
@@ -127,6 +132,15 @@
 				5EACD484278FADE80095F98A /* View */,
 			);
 			path = LoadQuestions;
+			sourceTree = "<group>";
+		};
+		5EC53B5B278FFA9B00093BB0 /* AnswerCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EC53B5C278FFABB00093BB0 /* AnswerCell.swift */,
+				5EC53B5E278FFACF00093BB0 /* Answer.xib */,
+			);
+			path = AnswerCell;
 			sourceTree = "<group>";
 		};
 		5EC59C4227707D3D0098486E = {
@@ -266,6 +280,7 @@
 				5EAD235B278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard in Resources */,
 				5EC59C5827707D3F0098486E /* Assets.xcassets in Resources */,
 				5EC59C5627707D3E0098486E /* Main.storyboard in Resources */,
+				5EC53B5F278FFACF00093BB0 /* Answer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +301,7 @@
 				5EC59C5327707D3E0098486E /* ViewController.swift in Sources */,
 				5E8E9FB42770DC5F0083BA7C /* Question.swift in Sources */,
 				5E6BAFB0278DE64700F7FFE4 /* LoadQuestionsPresenter.swift in Sources */,
+				5EC53B5D278FFABB00093BB0 /* AnswerCell.swift in Sources */,
 				5E6BAFB2278DE76300F7FFE4 /* LoadQuestionsViewController.swift in Sources */,
 				5EC45A96278D66DB00FB6674 /* NetworkGetQuestionsStore.swift in Sources */,
 				5EA98CF6278D7FC100C0C710 /* CodableQuestion.swift in Sources */,
