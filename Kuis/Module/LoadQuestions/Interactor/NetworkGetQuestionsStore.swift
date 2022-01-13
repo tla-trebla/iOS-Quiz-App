@@ -16,7 +16,7 @@ protocol GetQuestionsStore {
     func fetch(completion: @escaping GetQuestionsCompletion)
 }
 
-struct NetworkGetQuestionsStore: GetQuestionsStore {
+class NetworkGetQuestionsStore: GetQuestionsStore {
     
     func fetch(completion: @escaping GetQuestionsCompletion) {
         
