@@ -15,6 +15,10 @@ protocol LoadQuestionsSceneView {
 
 class LoadQuestionsViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var quizTableView: UITableView!
+    
+    // MARK: - Variables
     var presenter: LoadQuestionsPresenterInput?
     
     @IBAction func startGameButtonPressed(_ sender: Any) {

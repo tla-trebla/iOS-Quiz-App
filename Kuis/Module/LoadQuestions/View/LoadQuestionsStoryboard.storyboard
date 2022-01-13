@@ -41,6 +41,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tdq-Eo-eV9"/>
+                    <connections>
+                        <outlet property="quizTableView" destination="1Cy-Pb-6IR" id="fOo-Jn-sU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
