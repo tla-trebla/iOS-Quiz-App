@@ -27,6 +27,9 @@
                     <constraint firstItem="54u-dL-UIO" firstAttribute="centerY" secondItem="zqG-Nq-Jvn" secondAttribute="centerY" id="8Ha-CN-Tgz"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="answerTitleLabel" destination="54u-dL-UIO" id="7WQ-4j-kcb"/>
+            </connections>
             <point key="canvasLocation" x="136" y="64"/>
         </tableViewCell>
     </objects>

@@ -11,6 +11,7 @@ import UIKit
 class AnswerTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
+    @IBOutlet weak var answerTitleLabel: UILabel!
     
     // MARK: - Configuration
 }
