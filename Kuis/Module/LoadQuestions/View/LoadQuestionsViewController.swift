@@ -20,11 +20,6 @@ class LoadQuestionsViewController: UIViewController {
     
     // MARK: - Variables
     var presenter: LoadQuestionsPresenterInput?
-    
-    @IBAction func startGameButtonPressed(_ sender: Any) {
-        
-        presenter?.startFetchingQuestions()
-    }
 }
 
 // MARK: - View to Presenter
