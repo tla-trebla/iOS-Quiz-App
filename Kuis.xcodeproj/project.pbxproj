@@ -91,16 +91,40 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		5EC45A90278D669C00FB6674 /* LoadQuestions */ = {
+		5EACD484278FADE80095F98A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */,
+				5EAD235A278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EACD485278FADF80095F98A /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				5EA98CF7278D97AB00C0C710 /* LoadQuestionsInteractor.swift */,
 				5EC45A95278D66DB00FB6674 /* NetworkGetQuestionsStore.swift */,
 				5EA98CF5278D7FC100C0C710 /* CodableQuestion.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5EACD486278FAE080095F98A /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5EC45A90278D669C00FB6674 /* LoadQuestions */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5EC45A90278D669C00FB6674 /* LoadQuestions */ = {
+			isa = PBXGroup;
+			children = (
+				5EACD485278FADF80095F98A /* Interactor */,
 				5E6BAFAF278DE64700F7FFE4 /* LoadQuestionsPresenter.swift */,
-				5E6BAFB1278DE76300F7FFE4 /* LoadQuestionsViewController.swift */,
 				5E473ABF278ED5420019185D /* LoadQuestionsRouter.swift */,
-				5EAD235A278F2A7B00CDD0DE /* LoadQuestionsStoryboard.storyboard */,
+				5EACD484278FADE80095F98A /* View */,
 			);
 			path = LoadQuestions;
 			sourceTree = "<group>";
@@ -127,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5E473ABC278EC3040019185D /* Constants */,
-				5EC45A90278D669C00FB6674 /* LoadQuestions */,
+				5EACD486278FAE080095F98A /* Module */,
 				5E8E9FB22770DC510083BA7C /* Entity */,
 				5EC59C4E27707D3E0098486E /* AppDelegate.swift */,
 				5EC59C5027707D3E0098486E /* SceneDelegate.swift */,
