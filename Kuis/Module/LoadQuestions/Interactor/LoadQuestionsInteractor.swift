@@ -18,15 +18,15 @@ class DefaultLoadQuestionsInteractor: LoadQuestionsInteractor {
     
     var presenter: LoadQuestionsPresenterOutput?
     
-    private let networkStore: GetQuestionsStore
+    private let store: GetQuestionsStore
     
-    init(networkStore: GetQuestionsStore) {
-        self.networkStore = networkStore
+    init(store: GetQuestionsStore) {
+        self.store = store
     }
     
     func fetchQuestions() {
         
-        networkStore.fetch { result in
+        store.fetch { result in
             switch result {
             case .success(let questions):
                 self.presenter?.loadQuestionsSuccess(question: questions)
